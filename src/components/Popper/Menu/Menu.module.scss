@@ -18,6 +18,12 @@
     border-radius: 0;
     padding: 11px 14px;
     line-height: 1.8rem;
+    font-weight: 600;
+
+    &.separate {
+        border-top: 4px solid rgba(22, 24, 35, 0.012);
+    }
+
     &:hover {
         background: rgba(22, 24, 35, 0.03);
     }
