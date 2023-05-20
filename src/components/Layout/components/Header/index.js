@@ -5,14 +5,10 @@ import {
     faCircleXmark,
     faSpinner,
     faMagnifyingGlass,
-    faSign,
-    faSignIn,
     faEllipsisVertical,
     faEarthAsia,
-    faCircle,
     faCircleQuestion,
     faKeyboard,
-    faCloudUpload,
     faUser,
     faCoins,
     faGear,
@@ -25,11 +21,10 @@ import 'tippy.js/dist/tippy.css';
 
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
-import images from '~/assets/image';
-import { Wrapper as PopperWrapper } from '~/components/Popper';
-import AccountItem from '~/components/AccountItem/Index';
+import images from '~/assets/images';
 import Menu from '~/components/Popper/Menu/Index';
-
+import { UpLoadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
     {
@@ -143,7 +138,7 @@ function Header() {
                         <>
                             <Tippy delay={[0, 200]} content="Upload Video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UpLoadIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -155,7 +150,7 @@ function Header() {
                     )}
                     <Menu items={currentUser ? UserMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
                                 alt="Nguyen Van A"
                                 src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/f359ad9b23ffbeff595ff074fa6082b2~c5_100x100.jpeg?x-expires=1684386000&x-signature=VrqJrYoIuo0OaPPJ3v78PCTP7Dk%3D"
